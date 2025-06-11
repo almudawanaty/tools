@@ -480,15 +480,16 @@ readonly placeholder="نتيجة المقارنة ستظهر هنا..."></textar
   </script>
 <script>
   (function() {
-    const allowedDomain = "tsttawi.blogspot.com";
-    const blog = new URLSearchParams(window.location.search).get("blog");
+    const allowedBlog = "tsttawi.blogspot.com"; // ← اسم مدونة المشتري
+    const referrer = document.referrer;
 
-    if (blog !== allowedDomain) {
+    if (!referrer.includes(allowedBlog)) {
       document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
-      throw new Error("Unauthorized blog: " + blog);
+      throw new Error("Blocked unauthorized usage");
     }
   })();
 </script>
+
 
 
 </body>
