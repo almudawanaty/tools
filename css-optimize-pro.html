@@ -1,27 +1,9 @@
-
-(function() {
-  // รำใวม วแฯๆใํไวส วแใำใๆอ ศํๅว (ึํÝ วแฯๆใํไ ศสวฺ วแฺใํแ ๅไว)
-  const allowedDomains = ["https://tsttawi.blogspot.com", "yourcustomer.blogspot.com"];
-
-  // ฬ๓ํศ วแฯๆใํไ วแอวแํ ศฯๆไ www
-  const currentDomain = window.location.hostname.replace(/^www\./, "");
-
-  // แๆ วแฯๆใํไ ใิ ใไ ึใไ วแใำใๆอ ศํๅว ? วฺใแ อูั
-  if (!allowedDomains.includes(currentDomain)) {
-    // วใำอ ฿แ ใอสๆ์ วแีÝอษ
-    document.documentElement.innerHTML = "";
-    // วฺัึ ัำวแษ Ýํ วแ฿ๆไำๆแ
-    console.warn("สใ อูั วแรฯวษ ฺแ์ ๅะว วแไุวÞ: " + currentDomain);
-    // รๆ รฺฯ สๆฬํๅ วแาวฦั
-    // window.location.href = "https://example.com/blocked";
-  }
-})();
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>รฯวษ ึÛุ ๆสอแํแ ๆสอำํไ CSS วแใส฿วใแษ</title>
+  <title>ุฃุฏุงุฉ ุถุบุท ูุชุญููู ูุชุญุณูู CSS ุงูู…ุชูุงู…ูุฉ</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; }
@@ -186,62 +168,62 @@
 </head>
 <body>
 
-  <h1>รฯวษ ึÛุ ๆสอแํแ ๆสอำํไ ร฿ๆวฯ CSS วแใส฿วใแษ</h1>
+  <h1>ุฃุฏุงุฉ ุถุบุท ูุชุญููู ูุชุญุณูู ุฃููุงุฏ CSS ุงูู…ุชูุงู…ูุฉ</h1>
 
   <div class="container">
-    <div class="section-title">รฯฮแ ฿ๆฯ CSS</div>
-    <textarea id="cssInput" placeholder="ึฺ ฿ๆฯ CSS ๅไว..."></textarea>
+    <div class="section-title">ุฃุฏุฎู ููุฏ CSS</div>
+    <textarea id="cssInput" placeholder="ุถุน ููุฏ CSS ููุง..."></textarea>
 
-    <div class="section-title">ฮํวัวส วแึÛุ ๆวแสอำํไ</div>
+    <div class="section-title">ุฎูุงุฑุงุช ุงูุถุบุท ูุงูุชุญุณูู</div>
     <div class="flex-row">
-      <label><input type="checkbox" id="removeComments" checked /> ลาวแษ วแสฺแํÞวส</label>
-      <label><input type="checkbox" id="minify" /> ึÛุ ใ฿หÝ</label>
-      <label><input type="checkbox" id="space" /> สั฿ ใำวÝวส ศฺฯ วแÝๆวีแ</label>
-      <label><input type="checkbox" id="removeLastSemicolon" /> ลาวแษ วแÝวีแษ วแรฮํัษ ;</label>
-      <label><input type="checkbox" id="convertPxToRem" /> สอๆํแ px ลแ์ rem</label>
-      <label><input type="checkbox" id="checkDuplicates" /> ฿ิÝ ฮีวฦี ใ฿ััษ</label>
+      <label><input type="checkbox" id="removeComments" checked /> ุฅุฒุงูุฉ ุงูุชุนูููุงุช</label>
+      <label><input type="checkbox" id="minify" /> ุถุบุท ู…ูุซู</label>
+      <label><input type="checkbox" id="space" /> ุชุฑู ู…ุณุงูุงุช ุจุนุฏ ุงูููุงุตู</label>
+      <label><input type="checkbox" id="removeLastSemicolon" /> ุฅุฒุงูุฉ ุงููุงุตูุฉ ุงูุฃุฎูุฑุฉ ;</label>
+      <label><input type="checkbox" id="convertPxToRem" /> ุชุญููู px ุฅูู rem</label>
+      <label><input type="checkbox" id="checkDuplicates" /> ูุดู ุฎุตุงุฆุต ู…ูุฑุฑุฉ</label>
     </div>
 
     <div class="flex-row">
-      <button onclick="processCSS()">ึÛุ ๆสอำํไ CSS</button>
-      <button onclick="clearCSS()">ใำอ วแ฿ๆฯ</button>
-      <button onclick="selectAllCSS()">สอฯํฯ วแ฿แ</button>
-      <button onclick="copyCSS()">ไำฮ วแ฿ๆฯ</button>
-      <button onclick="downloadCSS('css')">สไาํแ .css</button>
-      <button onclick="downloadCSS('txt')">สไาํแ .txt</button>
+      <button onclick="processCSS()">ุถุบุท ูุชุญุณูู CSS</button>
+      <button onclick="clearCSS()">ู…ุณุญ ุงูููุฏ</button>
+      <button onclick="selectAllCSS()">ุชุญุฏูุฏ ุงููู</button>
+      <button onclick="copyCSS()">ูุณุฎ ุงูููุฏ</button>
+      <button onclick="downloadCSS('css')">ุชูุฒูู .css</button>
+      <button onclick="downloadCSS('txt')">ุชูุฒูู .txt</button>
     </div>
 
-    <div class="section-title">วแไสํฬษ</div>
-    <textarea id="cssOutput" readonly placeholder="ำสูๅั วแไสํฬษ ๅไว..."></textarea>
+    <div class="section-title">ุงููุชูุฌุฉ</div>
+    <textarea id="cssOutput" readonly placeholder="ุณุชุธูุฑ ุงููุชูุฌุฉ ููุง..."></textarea>
   </div>
 
   <div class="container">
-    <div class="section-title">รฯๆวส ลึวÝํษ</div>
+    <div class="section-title">ุฃุฏูุงุช ุฅุถุงููุฉ</div>
 
     <div class="tabs">
-      <div class="tab active" data-tab="generate">สๆแํฯ CSS</div>
-      <div class="tab" data-tab="compare">ใÞวัไษ CSS</div>
-      <div class="tab" data-tab="performance">สอแํแ วแรฯวม</div>
+      <div class="tab active" data-tab="generate">ุชูููุฏ CSS</div>
+      <div class="tab" data-tab="compare">ู…ูุงุฑูุฉ CSS</div>
+      <div class="tab" data-tab="performance">ุชุญููู ุงูุฃุฏุงุก</div>
     </div>
 
     <div id="generate" class="tab-content">
-      <textarea id="generateInput" placeholder="รฯฮแ วแฮีวฦี (ใหแว๐: background-color: red; font-size: 16px;)"></textarea>
-      <button onclick="generateCSS()">สๆแํฯ CSS</button>
-      <textarea id="generateOutput" readonly placeholder="ำํสใ สๆแํฯ ฿ๆฯ CSS ๅไว..."></textarea>
+      <textarea id="generateInput" placeholder="ุฃุฏุฎู ุงูุฎุตุงุฆุต (ู…ุซูุงู: background-color: red; font-size: 16px;)"></textarea>
+      <button onclick="generateCSS()">ุชูููุฏ CSS</button>
+      <textarea id="generateOutput" readonly placeholder="ุณูุชู… ุชูููุฏ ููุฏ CSS ููุง..."></textarea>
     </div>
 
     <div id="compare" class="tab-content" style="display:none;">
-      <textarea id="compareInput1" placeholder="รฯฮแ ใแÝ CSS วแรๆแ ๅไว..."></textarea>
-      <textarea id="compareInput2" placeholder="รฯฮแ ใแÝ CSS วแหวไํ ๅไว..."></textarea>
-      <button onclick="compareCSS()">ใÞวัไษ วแใแÝํไ</button>
+      <textarea id="compareInput1" placeholder="ุฃุฏุฎู ู…ูู CSS ุงูุฃูู ููุง..."></textarea>
+      <textarea id="compareInput2" placeholder="ุฃุฏุฎู ู…ูู CSS ุงูุซุงูู ููุง..."></textarea>
+      <button onclick="compareCSS()">ู…ูุงุฑูุฉ ุงูู…ูููู</button>
       <textarea id="compareOutput"
-readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
+readonly placeholder="ูุชูุฌุฉ ุงูู…ูุงุฑูุฉ ุณุชุธูุฑ ููุง..."></textarea>
     </div>
 
     <div id="performance" class="tab-content" style="display:none;">
-      <textarea id="performanceInput" placeholder="รฯฮแ ฿ๆฯ CSS แสอแํแ วแรฯวม..."></textarea>
-      <button onclick="analyzePerformance()">สอแํแ วแรฯวม</button>
-      <textarea id="performanceOutput" readonly placeholder="ไสํฬษ สอแํแ วแรฯวม ำสูๅั ๅไว..."></textarea>
+      <textarea id="performanceInput" placeholder="ุฃุฏุฎู ููุฏ CSS ูุชุญููู ุงูุฃุฏุงุก..."></textarea>
+      <button onclick="analyzePerformance()">ุชุญููู ุงูุฃุฏุงุก</button>
+      <textarea id="performanceOutput" readonly placeholder="ูุชูุฌุฉ ุชุญููู ุงูุฃุฏุงุก ุณุชุธูุฑ ููุง..."></textarea>
     </div>
   </div>
 
@@ -249,23 +231,23 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
 
   
   
-  <!-- Þำใ วแิัอ ศวแฺัศํษ -->
+  <!-- ูุณู… ุงูุดุฑุญ ุจุงูุนุฑุจูุฉ -->
 <div class="container lang-block active" id="desc-ar">
   <div class="tool-container">
     <div class="tool-description">
-      <h2>ิัอ วำสฮฯวใ รฯวษ สอำํไ CSS</h2>
+      <h2>ุดุฑุญ ุงุณุชุฎุฏุงู… ุฃุฏุงุฉ ุชุญุณูู CSS</h2>
       <p>
-        1. Þใ ศแีÞ ฿ๆฯ CSS Ýํ วแอÞแ วแใฮีี ศวแรฺแ์.<br>
-        2. วฮสั ใไ วแฮํวัวส วแใสวอษ ใหแ:<br>
-        - ลาวแษ วแสฺแํÞวส<br>
-        - สัสํศ วแฮีวฦี วแรศฬฯํษ<br>
-        - ลาวแษ วแฮีวฦี วแใ฿ััษ<br>
-        - ลาวแษ วแใำวÝวส ๆวแÝๆวีแ วแาวฦฯษ<br>
-        - สอๆํแ px ลแ์ rem<br>
-        3. วึÛุ ฺแ์ าั "สอำํไ วแ฿ๆฯ" แใฺวแฬษ วแ฿ๆฯ ๆสอำํไๅ.<br>
-        4. ํใ฿ไ฿ ใฺวํไษ วแไสํฬษ Ýํ ไÝำ วแอÞแ รๆ ไำฮๅว รๆ อÝูๅว ฿ใแÝ.<br>
-        5. ํๆฬฯ รํึ๐ว รฯๆวส ใำวฺฯษ ใหแ: สๆแํฯ CSS – ใÞวัไษ – สอแํแ – สอๆํแ ๆอฯวส.<br>
-        6. ํใ฿ไ฿ วแสศฯํแ ลแ์ วแๆวฬๅษ วแลไฬแําํษ ศวำสฮฯวใ วแราัวั Ýํ วแรฺแ์.
+        1. ูู… ุจูุตู ููุฏ CSS ูู ุงูุญูู ุงูู…ุฎุตุต ุจุงูุฃุนูู.<br>
+        2. ุงุฎุชุฑ ู…ู ุงูุฎูุงุฑุงุช ุงูู…ุชุงุญุฉ ู…ุซู:<br>
+        - ุฅุฒุงูุฉ ุงูุชุนูููุงุช<br>
+        - ุชุฑุชูุจ ุงูุฎุตุงุฆุต ุงูุฃุจุฌุฏูุฉ<br>
+        - ุฅุฒุงูุฉ ุงูุฎุตุงุฆุต ุงูู…ูุฑุฑุฉ<br>
+        - ุฅุฒุงูุฉ ุงูู…ุณุงูุงุช ูุงูููุงุตู ุงูุฒุงุฆุฏุฉ<br>
+        - ุชุญููู px ุฅูู rem<br>
+        3. ุงุถุบุท ุนูู ุฒุฑ "ุชุญุณูู ุงูููุฏ" ูู…ุนุงูุฌุฉ ุงูููุฏ ูุชุญุณููู.<br>
+        4. ูู…ููู ู…ุนุงููุฉ ุงููุชูุฌุฉ ูู ููุณ ุงูุญูู ุฃู ูุณุฎูุง ุฃู ุญูุธูุง ูู…ูู.<br>
+        5. ููุฌุฏ ุฃูุถูุง ุฃุฏูุงุช ู…ุณุงุนุฏุฉ ู…ุซู: ุชูููุฏ CSS โ€“ ู…ูุงุฑูุฉ โ€“ ุชุญููู โ€“ ุชุญููู ูุญุฏุงุช.<br>
+        6. ูู…ููู ุงูุชุจุฏูู ุฅูู ุงููุงุฌูุฉ ุงูุฅูุฌููุฒูุฉ ุจุงุณุชุฎุฏุงู… ุงูุฃุฒุฑุงุฑ ูู ุงูุฃุนูู.
       </p>
     </div>
   </div>
@@ -280,7 +262,7 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
   
   
   <script>
-    // วแสศๆํศวส (Tabs) - สศฯํแ วแใอสๆ์
+    // ุงูุชุจููุจุงุช (Tabs) - ุชุจุฏูู ุงูู…ุญุชูู
     const tabs = document.querySelectorAll('.tab');
     const tabContents = document.querySelectorAll('.tab-content');
 
@@ -295,7 +277,7 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
       });
     });
 
-    // ลูๅวั ัำวแษ ฺวฦใษ (toast)
+    // ุฅุธูุงุฑ ุฑุณุงูุฉ ุนุงุฆู…ุฉ (toast)
     function showToast(message) {
       const toast = document.getElementById('toast');
       toast.textContent = message;
@@ -305,12 +287,12 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
       }, 3000);
     }
 
-    // ฯวแษ ใฺวแฬษ ๆสอำํไ ึÛุ CSS
+    // ุฏุงูุฉ ู…ุนุงูุฌุฉ ูุชุญุณูู ุถุบุท CSS
     function processCSS() {
       let css = document.getElementById('cssInput').value;
 
       if (!css.trim()) {
-        showToast('วแัฬวม ลฯฮวแ ฿ๆฯ CSS รๆแว๐!');
+        showToast('ุงูุฑุฌุงุก ุฅุฏุฎุงู ููุฏ CSS ุฃููุงู!');
         return;
       }
 
@@ -321,12 +303,12 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
       const convertPxToRem = document.getElementById('convertPxToRem').checked;
       const checkDuplicates = document.getElementById('checkDuplicates').checked;
 
-      // ลาวแษ วแสฺแํÞวส
+      // ุฅุฒุงูุฉ ุงูุชุนูููุงุช
       if (removeComments) {
         css = css.replace(/\/\*[\s\S]*?\*\//g, '');
       }
 
-      // สอๆํแ px ลแ์ rem (ฺแ์ วÝสัวึ 16px = 1rem)
+      // ุชุญููู px ุฅูู rem (ุนูู ุงูุชุฑุงุถ 16px = 1rem)
       if (convertPxToRem) {
         css = css.replace(/(\d*\.?\d+)px/g, (match, p1) => {
           const remValue = (parseFloat(p1) / 16).toFixed(4).replace(/\.?0+$/, '');
@@ -334,39 +316,39 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
         });
       }
 
-      // ึÛุ CSS (ลาวแษ ใำวอวส าวฦฯษ ๆรำุั ฬฯํฯษ)
+      // ุถุบุท CSS (ุฅุฒุงูุฉ ู…ุณุงุญุงุช ุฒุงุฆุฏุฉ ูุฃุณุทุฑ ุฌุฏูุฏุฉ)
       if (minify) {
-        // ลาวแษ ฬใํฺ วแรำุั วแฬฯํฯษ ๆวแสวศ ๆวแใำวอวส วแาวฦฯษ
+        // ุฅุฒุงูุฉ ุฌู…ูุน ุงูุฃุณุทุฑ ุงูุฌุฏูุฏุฉ ูุงูุชุงุจ ูุงูู…ุณุงุญุงุช ุงูุฒุงุฆุฏุฉ
         css = css.replace(/\s+/g, ' ');
-        // ลาวแษ วแใำวÝวส Þศแ ๆศฺฯ วแรÞๆวำ ๆวแÝๆวีแ ๆวแไÞุสํไ
+        // ุฅุฒุงูุฉ ุงูู…ุณุงูุงุช ูุจู ูุจุนุฏ ุงูุฃููุงุณ ูุงูููุงุตู ูุงูููุทุชูู
         css = css.replace(/\s*{\s*/g, '{').replace(/\s*}\s*/g, '}')
                  .replace(/\s*;\s*/g, ';').replace(/\s*:\s*/g, ':')
                  .replace(/\s*,\s*/g, ',');
       } else {
-        // Ýํ อวแษ ฺฯใ วแึÛุ วแใ฿หÝก ÝÞุ ลาวแษ ศฺึ วแใำวอวส วแสฺำÝํษ วแาวฦฯษ
+        // ูู ุญุงูุฉ ุนุฏู… ุงูุถุบุท ุงูู…ูุซูุ ููุท ุฅุฒุงูุฉ ุจุนุถ ุงูู…ุณุงุญุงุช ุงูุชุนุณููุฉ ุงูุฒุงุฆุฏุฉ
         css = css.replace(/^\s+|\s+$/gm, '');
       }
 
-      // สั฿ ใำวÝษ ศฺฯ วแÝๆวีแ
+      // ุชุฑู ู…ุณุงูุฉ ุจุนุฏ ุงูููุงุตู
       if (space) {
         css = css.replace(/,/g, ', ');
       }
 
-      // ลาวแษ วแÝวีแษ วแรฮํัษ Ýํ ยฮั ฮวีํษ (Þศแ วแÞๆำ วแใÛแÞ)
+      // ุฅุฒุงูุฉ ุงููุงุตูุฉ ุงูุฃุฎูุฑุฉ ูู ุขุฎุฑ ุฎุงุตูุฉ (ูุจู ุงูููุณ ุงูู…ุบูู)
       if (removeLastSemicolon) {
         css = css.replace(/;(?=\s*})/g, '');
       }
 
-      // ฿ิÝ วแฮีวฦี วแใ฿ััษ ฯวฮแ ฿แ ศแๆ฿ CSS
+      // ูุดู ุงูุฎุตุงุฆุต ุงูู…ูุฑุฑุฉ ุฏุงุฎู ูู ุจููู CSS
       if (checkDuplicates) {
         css = removeDuplicateProperties(css);
       }
 
       document.getElementById('cssOutput').value = css.trim();
-      showToast('สใส ใฺวแฬษ วแ฿ๆฯ ศไฬวอ!');
+      showToast('ุชู…ุช ู…ุนุงูุฌุฉ ุงูููุฏ ุจูุฌุงุญ!');
     }
 
-    // ฯวแษ ลาวแษ วแฮีวฦี วแใ฿ััษ (ฯวฮแ ฿แ Þๆำ {})
+    // ุฏุงูุฉ ุฅุฒุงูุฉ ุงูุฎุตุงุฆุต ุงูู…ูุฑุฑุฉ (ุฏุงุฎู ูู ููุณ {})
     function removeDuplicateProperties(cssText) {
       return cssText.replace(/([^{]+){([^}]*)}/g, (match, selector, body) => {
         const props = body.split(';').map(p => p.trim()).filter(p => p.length > 0);
@@ -383,42 +365,42 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
       });
     }
 
-    // ใำอ วแอÞๆแ
+    // ู…ุณุญ ุงูุญููู
     function clearCSS() {
       document.getElementById('cssInput').value = '';
       document.getElementById('cssOutput').value = '';
-      showToast('สใ ใำอ วแอÞๆแ');
+      showToast('ุชู… ู…ุณุญ ุงูุญููู');
     }
 
-    // สอฯํฯ วแ฿แ Ýํ ใัศฺ วแลฮัวฬ
+    // ุชุญุฏูุฏ ุงููู ูู ู…ุฑุจุน ุงูุฅุฎุฑุงุฌ
     function selectAllCSS() {
       const output = document.getElementById('cssOutput');
       output.select();
       output.setSelectionRange(0, output.value.length);
-      showToast('สใ สอฯํฯ ฿แ วแ฿ๆฯ');
+      showToast('ุชู… ุชุญุฏูุฏ ูู ุงูููุฏ');
     }
 
-    // ไำฮ วแ฿ๆฯ ใไ ใัศฺ วแลฮัวฬ
+    // ูุณุฎ ุงูููุฏ ู…ู ู…ุฑุจุน ุงูุฅุฎุฑุงุฌ
     function copyCSS() {
       const output = document.getElementById('cssOutput');
       if (!output.value.trim()) {
-        showToast('แว ํๆฬฯ ฿ๆฯ แํสใ ไำฮๅ');
+        showToast('ูุง ููุฌุฏ ููุฏ ููุชู… ูุณุฎู');
         return;
       }
       output.select();
       output.setSelectionRange(0, output.value.length);
       navigator.clipboard.writeText(output.value).then(() => {
-        showToast('สใ ไำฮ วแ฿ๆฯ ลแ์ วแอวÝูษ');
+        showToast('ุชู… ูุณุฎ ุงูููุฏ ุฅูู ุงูุญุงูุธุฉ');
       }, () => {
-        showToast('อฯห ฮุร รหไวม วแไำฮ');
+        showToast('ุญุฏุซ ุฎุทุฃ ุฃุซูุงุก ุงููุณุฎ');
       });
     }
 
-    // สไาํแ วแ฿ๆฯ ศีํÛษ css รๆ txt
+    // ุชูุฒูู ุงูููุฏ ุจุตูุบุฉ css ุฃู txt
     function downloadCSS(ext) {
       const css = document.getElementById('cssOutput').value.trim();
       if (!css) {
-        showToast('แว ํๆฬฯ ฿ๆฯ แํสใ สไาํแๅ');
+        showToast('ูุง ููุฌุฏ ููุฏ ููุชู… ุชูุฒููู');
         return;
       }
       const blob = new Blob([css], { type: 'text/plain' });
@@ -427,74 +409,85 @@ readonly placeholder="ไสํฬษ วแใÞวัไษ ำสูๅั ๅไว..."></textarea>
       a.download = `compressed_css.${ext}`;
       a.click();
       URL.revokeObjectURL(a.href);
-      showToast(`สใ สไาํแ วแใแÝ ศีํÛษ .${ext}`);
+      showToast(`ุชู… ุชูุฒูู ุงูู…ูู ุจุตูุบุฉ .${ext}`);
     }
 
-    // สๆแํฯ ฿ๆฯ CSS ใไ วแฮีวฦี วแใฯฮแษ (Tab สๆแํฯ CSS)
+    // ุชูููุฏ ููุฏ CSS ู…ู ุงูุฎุตุงุฆุต ุงูู…ุฏุฎูุฉ (Tab ุชูููุฏ CSS)
     function generateCSS() {
       const input = document.getElementById('generateInput').value.trim();
       if (!input) {
-        showToast('วแัฬวม ลฯฮวแ วแฮีวฦี แสๆแํฯ CSS');
+        showToast('ุงูุฑุฌุงุก ุฅุฏุฎุงู ุงูุฎุตุงุฆุต ูุชูููุฏ CSS');
         return;
       }
-      // ลึวÝษ Þๆำํไ ใฮีีํไ แลูๅวั วแไสํฬษ ๆวึอษ
+      // ุฅุถุงูุฉ ููุณูู ู…ุฎุตุตูู ูุฅุธูุงุฑ ุงููุชูุฌุฉ ูุงุถุญุฉ
       const cssCode = `selector {\n  ${input.replace(/;?\s*$/,';')}\n}`;
       document.getElementById('generateOutput').value = cssCode;
-      showToast('สใ สๆแํฯ ฿ๆฯ CSS');
+      showToast('ุชู… ุชูููุฏ ููุฏ CSS');
     }
 
-    // ใÞวัไษ ใแÝํ CSS (Tab ใÞวัไษ CSS)
+    // ู…ูุงุฑูุฉ ู…ููู CSS (Tab ู…ูุงุฑูุฉ CSS)
     function compareCSS() {
       const css1 = document.getElementById('compareInput1').value.trim();
       const css2 = document.getElementById('compareInput2').value.trim();
 
       if (!css1 || !css2) {
-        showToast('วแัฬวม ลฯฮวแ ฿แว วแใแÝํไ แแใÞวัไษ');
+        showToast('ุงูุฑุฌุงุก ุฅุฏุฎุงู ููุง ุงูู…ูููู ููู…ูุงุฑูุฉ');
         return;
       }
 
       const lines1 = css1.split('\n').map(l => l.trim()).filter(l => l);
       const lines2 = new Set(css2.split('\n').map(l => l.trim()).filter(l => l));
 
-      // ลํฬวฯ วแÝัๆÞ - วแำุๆั วแใๆฬๆฯษ Ýํ วแรๆแ ๆÛํั ใๆฬๆฯษ Ýํ วแหวไํ
+      // ุฅูุฌุงุฏ ุงููุฑูู - ุงูุณุทูุฑ ุงูู…ูุฌูุฏุฉ ูู ุงูุฃูู ูุบูุฑ ู…ูุฌูุฏุฉ ูู ุงูุซุงูู
       const diff = lines1.filter(line => !lines2.has(line));
 
       document.getElementById('compareOutput').value = diff.length
         ? diff.join('\n')
-        : 'แว สๆฬฯ วฮสแวÝวส ศํไ วแใแÝํไ';
-      showToast('สใส ใÞวัไษ วแใแÝวส');
+        : 'ูุง ุชูุฌุฏ ุงุฎุชูุงูุงุช ุจูู ุงูู…ูููู';
+      showToast('ุชู…ุช ู…ูุงุฑูุฉ ุงูู…ููุงุช');
     }
 
-    // สอแํแ รฯวม วแ฿ๆฯ (Tab สอแํแ วแรฯวม)
+    // ุชุญููู ุฃุฏุงุก ุงูููุฏ (Tab ุชุญููู ุงูุฃุฏุงุก)
     function analyzePerformance() {
       const css = document.getElementById('performanceInput').value.trim();
       if (!css) {
-        showToast('วแัฬวม ลฯฮวแ ฿ๆฯ CSS แสอแํแ วแรฯวม');
+        showToast('ุงูุฑุฌุงุก ุฅุฏุฎุงู ููุฏ CSS ูุชุญููู ุงูุฃุฏุงุก');
         return;
       }
 
-      // อำวศ ุๆแ วแ฿ๆฯ (฿ใหวแ ศำํุ)
+      // ุญุณุงุจ ุทูู ุงูููุฏ (ูู…ุซุงู ุจุณูุท)
       const length = css.length;
 
-      // อำวศ ฺฯฯ วแสฺแํÞวส
+      // ุญุณุงุจ ุนุฏุฏ ุงูุชุนูููุงุช
       const comments = (css.match(/\/\*[\s\S]*?\*\//g) || []).length;
 
-      // อำวศ ฺฯฯ Þๆวฺฯ CSS (ฺฯฯ วแรÞๆวำ {})
+      // ุญุณุงุจ ุนุฏุฏ ููุงุนุฏ CSS (ุนุฏุฏ ุงูุฃููุงุณ {})
       const rulesCount = (css.match(/{/g) || []).length;
 
-      // อำวศ ใสๆำุ ุๆแ วแÞวฺฯษ
+      // ุญุณุงุจ ู…ุชูุณุท ุทูู ุงููุงุนุฏุฉ
       const avgRuleLength = rulesCount ? Math.round(length / rulesCount) : 0;
 
       const result = `
-ฺฯฯ วแรอัÝ: ${length}
-ฺฯฯ วแสฺแํÞวส: ${comments}
-ฺฯฯ Þๆวฺฯ CSS: ${rulesCount}
-ใสๆำุ ุๆแ วแÞวฺฯษ วแๆวอฯษ: ${avgRuleLength} อัÝ
+ุนุฏุฏ ุงูุฃุญุฑู: ${length}
+ุนุฏุฏ ุงูุชุนูููุงุช: ${comments}
+ุนุฏุฏ ููุงุนุฏ CSS: ${rulesCount}
+ู…ุชูุณุท ุทูู ุงููุงุนุฏุฉ ุงููุงุญุฏุฉ: ${avgRuleLength} ุญุฑู
       `.trim();
 
       document.getElementById('performanceOutput').value = result;
-      showToast('สใ สอแํแ วแรฯวม');
+      showToast('ุชู… ุชุญููู ุงูุฃุฏุงุก');
     }
   </script>
+<script>
+  // ู…ูุน ุงูุงุณุชุฎุฏุงู… ุฎุงุฑุฌ ูุทุงู ู…ุฏููุฉ ู…ุญุฏุฏุฉ
+  (function() {
+    const allowedDomain = "https://tsttawi.blogspot.com"; // โ ุบูู‘ุฑ ูุฐุง ุฅูู ุงุณู… ุงูู…ุฏููุฉ ุงูุญูููู
+    const currentHost = window.location.hostname;
+    if (!currentHost.includes(allowedDomain)) {
+      document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>ุชู… ุญุธุฑ ูุฐุง ุงูู…ูู - ุบูุฑ ู…ุตุฑุญ ุจู ููุฐุง ุงูู…ููุน.</h2>";
+      throw new Error("Blocked unauthorized usage");
+    }
+  })();
+</script>
 
 </body>
