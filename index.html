@@ -479,15 +479,16 @@ readonly placeholder="نتيجة المقارنة ستظهر هنا..."></textar
     }
   </script>
 <script>
-  // منع الاستخدام خارج نطاق مدونة محددة
   (function() {
-    const allowedDomain = "https://tsttawi.blogspot.com"; // ← غيّر هذا إلى اسم المدونة الحقيقي
-    const currentHost = window.location.hostname;
-    if (!currentHost.includes(allowedDomain)) {
+    const allowedDomain = "tsttawi.blogspot.com";
+    const blog = new URLSearchParams(window.location.search).get("blog");
+
+    if (blog !== allowedDomain) {
       document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
-      throw new Error("Blocked unauthorized usage");
+      throw new Error("Unauthorized blog: " + blog);
     }
   })();
 </script>
+
 
 </body>
