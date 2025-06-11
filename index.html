@@ -479,15 +479,14 @@ readonly placeholder="نتيجة المقارنة ستظهر هنا..."></textar
     }
   </script>
 <script>
-  (function() {
-    const allowedBlog = "tsttawi.blogspot.com"; // ← هنا اسم مدونة المشتري
-    const referrer = document.referrer;
+  const allowedKey = "tsttawi"; // ← غير ده على حسب كل مشتري
+  const urlParams = new URLSearchParams(window.location.search);
+  const key = urlParams.get("key");
 
-    if (!referrer.includes(allowedBlog)) {
-      document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
-      throw new Error("Blocked unauthorized usage");
-    }
-  })();
+  if (key !== allowedKey) {
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
+    throw new Error("Blocked unauthorized usage");
+  }
 </script>
 
 
