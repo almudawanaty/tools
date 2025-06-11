@@ -479,15 +479,20 @@ readonly placeholder="نتيجة المقارنة ستظهر هنا..."></textar
     }
   </script>
 <script>
-  const allowedKey = "https://tsttawi.blogspot.com/"; // ← غير ده على حسب كل مشتري
-  const urlParams = new URLSearchParams(window.location.search);
-  const key = urlParams.get("key");
+  // اسم المفتاح الخاص بالمشتري
+  const allowedKey = "tsttawi"; // ← غيره حسب اسم مدونة المشتري
 
+  // الحصول على الكي من الرابط
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("key");
+
+  // فحص المفتاح
   if (key !== allowedKey) {
     document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
-    throw new Error("Blocked unauthorized usage");
+    throw new Error("Unauthorized usage");
   }
 </script>
+
 
 
 
