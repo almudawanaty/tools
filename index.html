@@ -478,21 +478,24 @@ readonly placeholder="نتيجة المقارنة ستظهر هنا..."></textar
       showToast('تم تحليل الأداء');
     }
   </script>
- 
-<script>
-  // اسم المفتاح الخاص بالمشتري
-  const allowedKey = "tsttawi"; // ← غيره حسب اسم مدونة المشتري
-
-  // الحصول على الكي من الرابط
+ <script>
   const params = new URLSearchParams(window.location.search);
   const key = params.get("key");
 
-  // فحص المفتاح
-  if (key !== allowedKey) {
-    document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
-    throw new Error("Unauthorized usage");
-  }
+  fetch("https://almudawanaty.github.io/tools/keys.json")
+    .then(res => res.json())
+    .then(data => {
+      if (!data[key]) {
+        document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>🚫 تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
+        throw new Error("Unauthorized usage");
+      }
+    })
+    .catch(() => {
+      document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>⚠️ تعذر تحميل بيانات التحقق.</h2>";
+    });
 </script>
+
+<!-- كود أداتك ييجي بعد كده -->
 
 
 
