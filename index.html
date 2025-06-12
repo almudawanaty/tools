@@ -478,10 +478,20 @@ readonly placeholder="نتيجة المقارنة ستظهر هنا..."></textar
       showToast('تم تحليل الأداء');
     }
   </script>
+ 
 <script>
-(function () {
-  const _0x39ec=["search","get","key","tsttawi","<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>","innerHTML","body","Unauthorized usage"];const params=new URLSearchParams(window.location[_0x39ec[0]]);const key=params[_0x39ec[1]](_0x39ec[2]);if(key!==_0x39ec[3]){document[_0x39ec[6]][_0x39ec[5]]=_0x39ec[4];throw new Error(_0x39ec[7])}
-})();
+  // اسم المفتاح الخاص بالمشتري
+  const allowedKey = "tsttawi"; // ← غيره حسب اسم مدونة المشتري
+
+  // الحصول على الكي من الرابط
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("key");
+
+  // فحص المفتاح
+  if (key !== allowedKey) {
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
+    throw new Error("Unauthorized usage");
+  }
 </script>
 
 
