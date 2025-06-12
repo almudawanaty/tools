@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>لوحة أدوات المدوناتي</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet" />
+  <!-- أيقونات Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-X+FQZPf7UlvVY3e2nHYzkjOIvqlY8Y96ozOg+QJZBr5mSR8zXZclNiHObaVMC39QFz1uH8RlUL0u2+jZYYHgLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    body {
+      margin: 0;
+      background-color: #f4f4fa;
+      font-family: 'Cairo', sans-serif;
+      direction: rtl;
+    }
+
+    /* ? البانر */
+    .banner {
+      background-color: #0b265b;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 5px solid #3949ab;
+    }
+
+    .banner h1 {
+      font-size: 26px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .banner p {
+      font-size: 16px;
+      color: #ddd;
+      margin: 0;
+    }
+
+    /* ? فريم الأداة */
+    .tool-frame {
+      background-color: #fff;
+      border: 2px solid #0b265b;
+      border-radius: 15px;
+      margin: 30px auto;
+      padding: 25px;
+      max-width: 960px;
+      box-shadow: 0 8px 25px rgba(11, 38, 91, 0.15);
+    }
+
+    .tool-frame h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #0b265b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .tool-frame h2 i {
+      color: #3949ab;
+    }
+
+    .tool-placeholder {
+      background-color: #f9f9f9;
+      border: 2px dashed #bbb;
+      border-radius: 10px;
+      padding: 40px;
+      color: #666;
+      text-align: center;
+      font-size: 16px;
+      min-height: 150px;
+    }
+
+    @media (max-width: 600px) {
+      .tool-placeholder {
+        padding: 20px;
+        font-size: 14px;
+      }
+
+      .banner h1 {
+        font-size: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ? البانر -->
+  <div class="banner">
+    <h1><i class="fa-solid fa-star"></i> هذه الأداة تجدها فقط في <span style="color:#ffcc00;">مدونة المدوناتي</span></h1>
+    <p><i class="fa-solid fa-toolbox"></i> أدوات مجانية واحترافية للمبرمجين ومطوري بلوجر ??</p>
+  </div>
+
+  <!-- ? مكان إضافة الأداة -->
+  <div class="tool-frame">
+    <h2><i class="fa-solid fa-screwdriver-wrench"></i> أدوات المدوناتي</h2>
+    <div class="tool-placeholder">
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>أداة تعديل الصور</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f3f0ff;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 2px solid #7b1fa2;
+      border-radius: 15px;
+      background-color: #ede7f6;
+      box-shadow: 0 8px 20px rgba(123, 31, 162, 0.2);
+    }
+    h2 {
+      color: #6a1b9a;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #dropZone {
+      border: 3px dashed #7b1fa2;
+      padding: 30px;
+      text-align: center;
+      font-size: 18px;
+      color: #7b1fa2;
+      background-color: #f8eafa;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      transition: background-color 0.3s;
+    }
+    #dropZone.dragover {
+      background-color: #e1bee7;
+    }
+    label {
+      display: block;
+      margin: 12px 0 6px;
+      font-weight: 600;
+      color: #7b1fa2;
+    }
+    input[type="file"],
+    input[type="text"],
+    input[type="number"],
+    select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 2px solid #7b1fa2;
+      border-radius: 10px;
+      font-size: 16px;
+      direction: ltr;
+    }
+    input[type="text"] {
+      direction: ltr;
+    }
+    input[type="number"] {
+      direction: rtl;
+    }
+    input[type="range"] {
+      width: 100%;
+      margin-top: 10px;
+    }
+    .quality-value {
+      text-align: center;
+      margin-top: 6px;
+      font-weight: 700;
+      color: #5e35b1;
+    }
+    .buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .buttons button {
+      flex: 1 1 45%;
+      padding: 14px 0;
+      background: linear-gradient(145deg, #7e57c2, #673ab7);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .buttons button:hover {
+      background: linear-gradient(145deg, #5e35b1, #4527a0);
+      transform: scale(1.05);
+    }
+    #previewContainer {
+      margin-top: 30px;
+      text-align: center;
+      border: 2px solid #7b1fa2;
+      border-radius: 12px;
+      padding: 15px;
+      background-color: #f3e5f5;
+    }
+    #previewContainer img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(123, 31, 162, 0.3);
+    }
+    #downloadBtn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 25px;
+      background: linear-gradient(145deg, #7e57c2, #673ab7);
+      color: white;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    #downloadBtn:hover {
+      background: linear-gradient(145deg, #5e35b1, #4527a0);
+      transform: scale(1.05);
+    }
+    #imageSize {
+      text-align: center;
+      color: #6a1b9a;
+      font-weight: bold;
+      margin-top: 10px;
+      font-size: 16px;
+      white-space: nowrap;
+      user-select: none;
+    }
+    @media (max-width: 600px) {
+      .buttons button {
+        flex: 1 1 100%;
+      }
+      #downloadBtn {
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>⚡ أداة تعديل الصور</h2>
+
+    <div id="dropZone">📥 اسحب الصورة هنا لإفلاتها</div>
+
+    <label for="uploadImage">رفع صورة من جهازك</label>
+    <input type="file" id="uploadImage" accept="image/*" />
+
+    <label for="imageURL">أو أدخل رابط صورة</label>
+    <input type="text" id="imageURL" placeholder="https://example.com/image.jpg" />
+
+    <label for="widthInput">عرض الصورة (بالبكسل)</label>
+    <input type="number" id="widthInput" placeholder="مثلاً: 800" min="1" />
+
+    <label for="heightInput">ارتفاع الصورة (بالبكسل)</label>
+    <input type="number" id="heightInput" placeholder="مثلاً: 600" min="1" />
+
+    <label for="formatSelect">اختر صيغة الصورة</label>
+    <select id="formatSelect">
+      <option value="jpeg">JPEG</option>
+      <option value="jpg">JPG</option>
+      <option value="png">PNG</option>
+      <option value="webp">WEBP</option>
+    </select>
+
+    <label for="qualityInput">جودة الصورة (%)</label>
+    <input type="range" id="qualityInput" min="1" max="100" value="90" />
+    <div class="quality-value" id="qualityValue">90%</div>
+
+    <div class="buttons">
+      <button onclick="processImage()">تطبيق التعديلات</button>
+      <button onclick="clearAll()">مسح الكل</button>
+    </div>
+
+    <div id="previewContainer"></div>
+    <div id="imageSize"></div>
+  </div>
+
+  <script>
+    const qualityInput = document.getElementById('qualityInput');
+    const qualityValue = document.getElementById('qualityValue');
+    const fileInput = document.getElementById('uploadImage');
+    const preview = document.getElementById('previewContainer');
+    const dropZone = document.getElementById('dropZone');
+    const urlInput = document.getElementById('imageURL');
+    const widthInput = document.getElementById('widthInput');
+    const heightInput = document.getElementById('heightInput');
+    const formatSelect = document.getElementById('formatSelect');
+    const imageSizeDiv = document.getElementById('imageSize');
+
+    let currentFileSize = 0;
+    let currentImage = null;
+
+    qualityInput.addEventListener('input', () => {
+      qualityValue.textContent = qualityInput.value + '%';
+      if (preview.querySelector('img')) {
+        processImage(true);
+      }
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (fileInput.files && fileInput.files[0]) {
+        loadImageFromFile(fileInput.files[0]);
+      }
+    });
+
+    dropZone.addEventListener('dragover', (e) => {
+      e.preventDefault();
+      dropZone.classList.add('dragover');
+    });
+
+    dropZone.addEventListener('dragleave', () => {
+      dropZone.classList.remove('dragover');
+    });
+
+    dropZone.addEventListener('drop', (e) => {
+      e.preventDefault();
+      dropZone.classList.remove('dragover');
+      if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+        fileInput.files = e.dataTransfer.files;
+        loadImageFromFile(e.dataTransfer.files[0]);
+      }
+    });
+
+    urlInput.addEventListener('change', () => {
+      if (urlInput.value.trim()) {
+        loadImageFromURL(urlInput.value.trim());
+      }
+    });
+
+    formatSelect.addEventListener('change', () => {
+      if (preview.querySelector('img')) {
+        processImage(true);
+      }
+    });
+
+    widthInput.addEventListener('input', () => {
+      if (preview.querySelector('img')) {
+        processImage(true);
+      }
+    });
+
+    heightInput.addEventListener('input', () => {
+      if (preview.querySelector('img')) {
+        processImage(true);
+      }
+    });
+
+    function loadImageFromFile(file) {
+      currentFileSize = file.size;
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        urlInput.value = '';
+        setImage(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function loadImageFromURL(url) {
+      currentFileSize = 0;
+      const img = new Image();
+      img.crossOrigin = "Anonymous";
+      img.onload = function() {
+        setImage(url);
+      };
+      img.onerror = function() {
+        alert('فشل تحميل الصورة من الرابط.');
+      };
+      img.src = url;
+    }
+
+    function setImage(src) {
+      const img = new Image();
+      img.crossOrigin = "Anonymous";
+      img.onload = function() {
+        currentImage = img;
+        preview.innerHTML = '';
+        imageSizeDiv.innerHTML = '';
+
+        let displayWidth = widthInput.value ? parseInt(widthInput.value) : img.width;
+        let displayHeight = heightInput.value ? parseInt(heightInput.value) : img.height;
+
+        if (isNaN(displayWidth) || displayWidth <= 0) displayWidth = img.width;
+        if (isNaN(displayHeight) || displayHeight <= 0) displayHeight = img.height;
+
+        widthInput.value = displayWidth;
+        heightInput.value = displayHeight;
+
+        const previewImg = document.createElement('img');
+        previewImg.src = src;
+        previewImg.width = displayWidth;
+        previewImg.height = displayHeight;
+        preview.appendChild(previewImg);
+
+        let sizeKB = currentFileSize ? (currentFileSize / 1024).toFixed(2) + ' كيلوبايت' : 'غير معروف';
+        imageSizeDiv.innerHTML = `الأبعاد الأصلية: <strong>${img.width} × ${img.height}</strong> بكسل - حجم الصورة: <strong>${sizeKB}</strong>`;
+      };
+      img.onerror = function() {
+        alert('حدث خطأ في تحميل الصورة.');
+      };
+      img.src = src;
+    }
+
+    function processImage(fromSlider = false) {
+      if (!currentImage) {
+        alert('يرجى رفع صورة أو إدخال رابط صورة أولاً.');
+        return;
+      }
+
+      const canvas = document.createElement('canvas');
+      let w = parseInt(widthInput.value);
+      let h = parseInt(heightInput.value);
+
+      if (isNaN(w) || w <= 0) w = currentImage.width;
+      if (isNaN(h) || h <= 0) h = currentImage.height;
+
+      canvas.width = w;
+      canvas.height = h;
+
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(currentImage, 0, 0, w, h);
+
+      const format = formatSelect.value.toLowerCase();
+      let quality = parseInt(qualityInput.value) / 100;
+
+      let mimeType = 'image/png';
+      if (format === 'jpeg' || format === 'jpg') mimeType = 'image/jpeg';
+      else if (format === 'webp') mimeType = 'image/webp';
+
+      const dataURL = canvas.toDataURL(mimeType, quality);
+
+      preview.innerHTML = '';
+      const imgPreview = new Image();
+      imgPreview.src = dataURL;
+      imgPreview.width = w;
+      imgPreview.height = h;
+      preview.appendChild(imgPreview);
+
+      updateDownloadLink(dataURL, format);
+
+      const base64Length = dataURL.length - (dataURL.indexOf(',') + 1);
+      const fileSizeInBytes = Math.round(base64Length * 3 / 4);
+      const sizeKB = (fileSizeInBytes / 1024).toFixed(2);
+
+      imageSizeDiv.innerHTML = `الأبعاد الأصلية: <strong>${currentImage.width} × ${currentImage.height}</strong> بكسل - حجم الصورة: <strong>${sizeKB}</strong>`;
+    }
+
+    function updateDownloadLink(dataURL, format) {
+      let downloadBtn = document.getElementById('downloadBtn');
+      if (!downloadBtn) {
+        downloadBtn = document.createElement('a');
+        downloadBtn.id = 'downloadBtn';
+        downloadBtn.textContent = '⬇️ تحميل الصورة';
+        preview.appendChild(downloadBtn);
+      }
+      downloadBtn.href = dataURL;
+      downloadBtn.download = `edited-image.${format}`;
+    }
+
+    function clearAll() {
+      preview.innerHTML = '';
+      imageSizeDiv.innerHTML = '';
+      fileInput.value = '';
+      urlInput.value = '';
+      widthInput.value = '';
+      heightInput.value = '';
+      formatSelect.value = 'jpeg';
+      qualityInput.value = 90;
+      qualityValue.textContent = '90%';
+      currentImage = null;
+      currentFileSize = 0;
+    }
+  </script>
+</body>
+</html>    </div>
+  </div>
+
+  
+  
+  
+  
+  <script>
+  // اسم المفتاح المسموح به (اسم مدونة المشتري)
+  const allowedKey = "tsttawi"; // ← غيّر هذا حسب المشتري الجديد
+
+  // استخراج المفتاح من الرابط
+  const params = new URLSearchParams(window.location.search);
+  const key = params.get("key");
+
+  // تحقق من صحة المفتاح
+  if (key !== allowedKey) {
+    document.body.innerHTML = "<h2 style='text-align:center; margin-top: 100px; color: red;'>تم حظر هذا الملف - غير مصرح به لهذا الموقع.</h2>";
+    throw new Error("Unauthorized usage");
+  }
+</script>
+  
+  
+  
+  
+</body>
+</html>
